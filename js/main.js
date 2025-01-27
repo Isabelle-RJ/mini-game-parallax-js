@@ -22,13 +22,13 @@ window.addEventListener("load", () => {
   modal.style.display = "flex"
 })
 
-const yoshi = document.querySelector("#yoshi")
-const floorUp = document.querySelector("#floor-up")
-const floorDown = document.querySelector("#floor-down")
-const landscape = document.querySelector("#landscape")
+const yoshi = document.querySelector(".yoshi")
+const floorUp = document.querySelector(".floor-up")
+const floorDown = document.querySelector(".floor-down")
+const landscape = document.querySelector(".landscape")
 const sky = document.querySelector("body")
 
-let move = 0;
+let move = 0
 
 window.addEventListener("load", () => {
   document.addEventListener("keydown", walk)
@@ -38,14 +38,14 @@ window.addEventListener("load", () => {
 function walk(event) {
   switch (event.key) {
     case "ArrowLeft":
-      yoshi.classList.add("yoshi-left")
+      yoshi.classList.add("yoshi", "yoshi-left")
       yoshi.classList.remove("yoshi-right")
       move++
       parallax()
       break
 
     case "ArrowRight":
-      yoshi.classList.add("yoshi-right")
+      yoshi.classList.add("yoshi", "yoshi-right")
       yoshi.classList.remove("yoshi-left")
       move--
       parallax()
