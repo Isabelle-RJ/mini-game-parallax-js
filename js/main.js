@@ -23,8 +23,6 @@ window.addEventListener("load", () => {
 })
 
 const yoshi = document.querySelector(".yoshi")
-const floorUp = document.querySelector(".floor-up")
-const floorDown = document.querySelector(".floor-down")
 const landscape = document.querySelector(".landscape")
 const sky = document.querySelector("body")
 
@@ -59,8 +57,6 @@ function stop(event) {
 }
 
 function parallax() {
-  floorDown.style.backgroundPositionX = move * 8 + "px"
-  floorUp.style.backgroundPositionX = move * 8 + "px"
   landscape.style.backgroundPositionX = move * 4 + "px"
   sky.style.backgroundPositionX = move + "px"
 }
